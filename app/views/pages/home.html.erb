@@ -1,5 +1,10 @@
 <div class= "jumbotron center">
 	<h1>Phoebe Loves Pinterest</h1>
-	<p>Click here to <%= link_to "Sign up", "#", class: "btn btn-primary" %>
-		or <%= link_to "Log In", "#", class: "btn btn-primary" %></p>
+	<% if user_signed_in? %> 
+	# do something
+	<% else %>
+
+	<p>Click here to <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+		or <%= link_to "Log In", new_user_session_path, class: "btn btn-primary" %></p>
+		<% end %> 
 </div>
