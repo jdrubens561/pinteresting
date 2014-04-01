@@ -1,7 +1,9 @@
 <div class= "jumbotron center">
 	<h1>Phoebe Loves Pinterest</h1>
 	<% if user_signed_in? %> 
-	# do something
+	
+	<p> Click there to <%= link_to "Create Pins", new_pin_path, class: "btn btn-primary"%></p>
+
 	<% else %>
 
 	<p>Click here to <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
