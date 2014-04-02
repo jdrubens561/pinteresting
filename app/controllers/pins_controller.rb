@@ -25,13 +25,14 @@ class PinsController < ApplicationController
   # POST /pins
   # POST /pins.json
   def create
+    
     @pin = current_user.pins.build(pin_params)
-
-    respond_to do |format|
+    
+      respond_to do |format|
       if @pin.save
        format.html { redirect_to @pin, notice: 'Pin was successfully created.' }
       else
-        fotmat.html { render action: 'new' }
+      fotmat.html { render action: 'new' }
       end
     end
   end

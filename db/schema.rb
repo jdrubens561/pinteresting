@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140402170356) do
 
-  create_table "pinds", force: true do |t|
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "pins", force: true do |t|
     t.string   "description"
